@@ -1,0 +1,150 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #102a43;
+  background:
+    radial-gradient(circle at top, rgba(255, 209, 102, 0.35), transparent 30%),
+    linear-gradient(135deg, #f4f7fb 0%, #d9e7ff 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.auth-card {
+  width: min(100%, 440px);
+  padding: 32px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 24px 60px rgba(16, 42, 67, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  color: #486581;
+}
+
+.auth-card h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.subtitle {
+  margin: 12px 0 24px;
+  color: #486581;
+  line-height: 1.5;
+}
+
+.mode-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.mode-toggle button {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 16px;
+  background: #d9e2ec;
+  color: #243b53;
+  cursor: pointer;
+}
+
+.mode-toggle button.active {
+  background: #102a43;
+  color: #fff;
+}
+
+.auth-form {
+  display: grid;
+  gap: 16px;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #bcccdc;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.submit-button {
+  margin-top: 8px;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #0b6e4f, #1f9d55);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.feedback {
+  margin: 18px 0 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+}
+
+.feedback.success {
+  background: #d9fbe5;
+  color: #0b6e4f;
+}
+
+.feedback.error {
+  background: #ffe3e3;
+  color: #c92a2a;
+}
+
+.user-panel {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #f0f4f8;
+}
+
+.user-panel h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 520px) {
+  .auth-card {
+    padding: 24px;
+  }
+
+  .auth-card h1 {
+    font-size: 1.7rem;
+  }
+}
